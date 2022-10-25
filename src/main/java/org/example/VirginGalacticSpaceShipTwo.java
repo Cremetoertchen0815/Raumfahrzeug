@@ -22,6 +22,7 @@ public class VirginGalacticSpaceShipTwo {
     private Passanger[] passangers;
     private Pilot[] pilots;
     private HybridRocketSystem rocketSystem;
+    private FuelTank fuelTank;
 
     public void undock() {
 
