@@ -1,4 +1,4 @@
 package org.example;
 
-public class RollThruster {
+public class RollThruster extends Thruster {
 }
