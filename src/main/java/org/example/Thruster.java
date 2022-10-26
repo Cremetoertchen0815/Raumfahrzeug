@@ -2,7 +2,11 @@ package org.example;
 
 public class Thruster {
     private boolean isOn;
-    private void thrust() {
+    public void thrust() {
+        isOn = true;
+    }
 
+    public void stopThrusting() {
+        isOn = false;
     }
 }

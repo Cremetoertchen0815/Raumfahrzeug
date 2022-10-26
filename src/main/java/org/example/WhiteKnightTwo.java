@@ -1,5 +1,5 @@
 package org.example;
 
 public class WhiteKnightTwo {
-    private FuelTank fuelTank;
+    private FuelTank fuelTank = new FuelTank(1000);
 }
