@@ -20,7 +20,7 @@ public class VirginGalacticSpaceShipTwo {
     private EmergencyEgress emergencyEgress = new EmergencyEgress();
     private Flight flight;
     private Passenger[] passengers = new Passenger[6];
-    private Pilot[] pilots = new Pilot[] {new Pilot(), new Pilot()};
+    private Pilot[] pilots = new Pilot[]{new Pilot(), new Pilot()};
     private HybridRocketSystem rocketSystem = new HybridRocketSystem();
     private FuelTank fuelTank = new FuelTank(500);
 

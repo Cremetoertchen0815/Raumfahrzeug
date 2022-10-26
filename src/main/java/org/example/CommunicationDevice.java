@@ -3,6 +3,7 @@ package org.example;
 public class CommunicationDevice {
     private Engineer engineer;
     private Pilot pilot;
+
     private void sendMessageToPilot(int kindOfMessage) {
         pilot.messageReceived(kindOfMessage);
     }
