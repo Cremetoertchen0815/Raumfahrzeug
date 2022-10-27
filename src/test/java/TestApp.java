@@ -13,7 +13,7 @@ public class TestApp {
     @BeforeEach
     public void setUp() {
         vgsst = new VirginGalacticSpaceShipTwo();
-        wkt = new WhiteKnightTwo();
+        wkt = new WhiteKnightTwo(vgsst);
         d = new Door();
     }
 
