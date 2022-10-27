@@ -16,7 +16,7 @@ public class VirginGalacticSpaceShipTwo {
     private final Elevons elevons;
     private final FeatherMechanism featherMechanism = new FeatherMechanism();
     private final Rudder rudder;
-    private final Thruster thruster = new RollThruster();
+    private final Thruster thruster;
     private final Cabin cabin = new Cabin(3.7f);
     private final TPS tps = new TPS();
     private final NoseSkid noseSkid = new NoseSkid();
@@ -30,6 +30,7 @@ public class VirginGalacticSpaceShipTwo {
     public VirginGalacticSpaceShipTwo() {
         elevons = new Elevons(this);
         rudder = new Rudder(this);
+        thruster = new RollThruster(this);
     }
 
     public void undock() {
@@ -37,16 +38,15 @@ public class VirginGalacticSpaceShipTwo {
     }
 
     public void startEngine() {
-        rocketSystem.turnEngineOff();
+        rocketSystem.turnOff();
     }
 
     public void turnOffEngine() {
-        rocketSystem.turnEngineOn();
+        rocketSystem.turnOn();
     }
 
     public void takeOff() {
         shipState = ShipState.TAKING_OFF;
-        thruster.thrust();
     }
 
     public void boost() {
