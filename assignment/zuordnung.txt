@@ -1,0 +1,9 @@
+---Aufgabenzuordnung---
+S0[NR]/[FERTIG? J/N]: [NAME PERSON]([BESCHREIBUNG])
+S01/J: Nico(Vorgehensmodell2 / Organisation, Anforderungsmanagement (SOPHIST Master-Methode) und Anwendungsfalldiagramm)
+S02/?: ?(Aktivitätsdiagramme für Service, Boarding und Flug)
+S03/N: Johannes(Klassendiagramm und Paketdiagramm, Berücksichtigung SOLID-Design Prinzipien)
+S04/?: ?(Sequenzdiagramm und Zustandsdiagramm für das Trägerflugzeug und Raumfahrzeug)
+S05/J: Mirco(Implementierung I : SpacePort, Tankfahrzeug und Tower)
+S06/J: Mirco(Implementierung II : Trägerflugzeug und Raumfahrzeug)
+S07/N: Karam(Testmanagement | JUnit und/oder Mockito für Implementierungen I und II)
