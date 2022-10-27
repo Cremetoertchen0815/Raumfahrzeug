@@ -2,6 +2,7 @@ package org.example;
 
 public class Rudder {
     private final VirginGalacticSpaceShipTwo spaceship;
+
     public Rudder(VirginGalacticSpaceShipTwo ship) {
         spaceship = ship;
     }

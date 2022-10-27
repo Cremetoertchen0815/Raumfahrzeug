@@ -3,6 +3,7 @@ package org.example;
 public class RollThruster extends Thruster {
 
     private final VirginGalacticSpaceShipTwo spaceship;
+
     public RollThruster(VirginGalacticSpaceShipTwo ship) {
         spaceship = ship;
     }

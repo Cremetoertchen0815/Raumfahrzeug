@@ -1,13 +1,9 @@
 package org.example;
 
 public class VirginGalacticSpaceShipTwo {
-    public int height;
-    public int speed;
-    public int apogee;
-    public YawPitchRoll rotation;
-
     //Associations
     private ShipState shipState = null;
+    private Flight flight;
     private final WhiteKnightTwo whiteKnightTwo = new WhiteKnightTwo();
     private final Window windowSide = new Window(43);
     private final Window windowTop = new Window(33);
@@ -21,11 +17,16 @@ public class VirginGalacticSpaceShipTwo {
     private final TPS tps = new TPS();
     private final NoseSkid noseSkid = new NoseSkid();
     private final EmergencyEgress emergencyEgress = new EmergencyEgress();
-    private Flight flight;
     private final Passenger[] passengers = new Passenger[6];
-    private final Pilot[] pilots = new Pilot[]{new Pilot(), new Pilot()};
+    private final Pilot[] pilots = new Pilot[] {new Pilot(), new Pilot()};
     private final HybridRocketSystem rocketSystem = new HybridRocketSystem();
     private final FuelTank fuelTank = new FuelTank(500);
+
+    //Fields
+    public int height;
+    public int speed;
+    public int apogee;
+    public YawPitchRoll rotation;
 
     public VirginGalacticSpaceShipTwo() {
         elevons = new Elevons(this);
