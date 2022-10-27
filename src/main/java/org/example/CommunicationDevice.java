@@ -1,22 +1,32 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CommunicationDevice {
-    private Engineer engineer;
-    private Pilot pilot;
+    public static List<CommunicationDevice> devices = new ArrayList<>();
+    private final ICommunicator creator;
 
-    private void sendMessageToPilot(int kindOfMessage) {
-        pilot.messageReceived(kindOfMessage);
+    public CommunicationDevice(ICommunicator creator) {
+        this.creator = creator;
+        devices.add(this);
     }
 
-    private void sendMessageToEngineer(int kindOfMessage) {
-        engineer.messageReceived(kindOfMessage);
+    public void sendMessageToPilot(int kindOfMessage) {
+
+        for (var device : devices) {
+            if (device.creator instanceof Pilot) {
+                device.creator.messageReceived(kindOfMessage);
+            }
+        }
     }
 
-    public void setEngineer(Engineer engineer) {
-        this.engineer = engineer;
+    public void sendMessageToEngineer(int kindOfMessage) {
+        for (var device : devices) {
+            if (device.creator instanceof Engineer) {
+                device.creator.messageReceived(kindOfMessage);
+            }
+        }
     }
 
-    public void setPilot(Pilot pilot) {
-        this.pilot = pilot;
-    }
 }

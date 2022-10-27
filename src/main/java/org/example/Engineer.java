@@ -1,6 +1,6 @@
 package org.example;
 
-public class Engineer {
+public class Engineer implements ICommunicator {
 
     public void messageReceived(int message) {
 
