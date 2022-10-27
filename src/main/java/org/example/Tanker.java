@@ -3,7 +3,7 @@ package org.example;
 public class Tanker extends Vehicle {
     private static final int transferAmount = 50;
     private Runway workingRunway;
-    private Window window;
+    private Window[] windows = new Window[] {new Window(10), new Window(10), new Window(10), new Window(10)};
     private FuelTank operatingTank = new FuelTank(50);
     private FuelTank transferTank = new FuelTank(500);
 

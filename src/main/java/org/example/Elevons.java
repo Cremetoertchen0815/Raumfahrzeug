@@ -2,9 +2,12 @@ package org.example;
 
 public class Elevons {
     private final VirginGalacticSpaceShipTwo spaceship;
+    private final ElectricServoHorizontal electricServoHorizontal;
 
     public Elevons(VirginGalacticSpaceShipTwo ship) {
+
         spaceship = ship;
+        electricServoHorizontal = new ElectricServoHorizontal(this);
     }
 
     public void setPitch(float value) {

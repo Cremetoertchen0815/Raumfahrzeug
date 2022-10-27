@@ -1,18 +1,19 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class VirginGalacticSpaceShipTwo {
     //Associations
     private ShipState shipState = null;
-    private Flight flight;
-    private final WhiteKnightTwo whiteKnightTwo = new WhiteKnightTwo();
-    private final Window windowSide = new Window(43);
-    private final Window windowTop = new Window(33);
-    private final Window windowCrewStation = new Window(53);
+    private final List<Flight> flight = new ArrayList<>();
+    private final WhiteKnightTwo whiteKnightTwo ;
+    private final Window[] windows;
     private final Door door = new Door();
-    private final Elevons elevons;
-    private final FeatherMechanism featherMechanism = new FeatherMechanism();
-    private final Rudder rudder;
-    private final Thruster thruster;
+    private final Elevons[] elevons;
+    private final FeatherMechanism[] featherMechanism = new FeatherMechanism[] { new FeatherMechanism(), new FeatherMechanism()};
+    private final Rudder[] rudder;
+    private final Thruster[] thruster;
     private final Cabin cabin = new Cabin(3.7f);
     private final TPS tps = new TPS();
     private final NoseSkid noseSkid = new NoseSkid();
@@ -29,9 +30,17 @@ public class VirginGalacticSpaceShipTwo {
     public YawPitchRoll rotation;
 
     public VirginGalacticSpaceShipTwo() {
-        elevons = new Elevons(this);
-        rudder = new Rudder(this);
-        thruster = new RollThruster(this);
+        elevons = new Elevons[] { new Elevons(this),  new Elevons(this)};
+        rudder = new Rudder[] { new Rudder(this), new Rudder(this)};
+        thruster = new Thruster[] { new RollThruster(this), new RollThruster(this)};
+        whiteKnightTwo = new WhiteKnightTwo(this);
+
+        //Create windows
+        windows = new Window[21];
+        int idx = 0;
+        for (int i = 0; i < 8; i++) windows[idx++] = new Window(43); //Add side windows
+        for (int i = 0; i < 8; i++) windows[idx++] = new Window(33); //Add top windows
+        for (int i = 0; i < 5; i++) windows[idx++] = new Window(53); //Add crew station windows
     }
 
     public void undock() {
@@ -75,26 +84,26 @@ public class VirginGalacticSpaceShipTwo {
     }
 
     public Window[] getWindows() {
-        return new Window[] {windowSide, windowTop, windowCrewStation};
+        return windows;
     }
 
     public Door getDoor() {
         return door;
     }
 
-    public Elevons getElevons() {
+    public Elevons[] getElevons() {
         return elevons;
     }
 
-    public FeatherMechanism getFeatherMechanism() {
+    public FeatherMechanism[] getFeatherMechanism() {
         return featherMechanism;
     }
 
-    public Rudder getRudder() {
+    public Rudder[] getRudder() {
         return rudder;
     }
 
-    public Thruster getThruster() {
+    public Thruster[] getThruster() {
         return thruster;
     }
 
@@ -112,10 +121,6 @@ public class VirginGalacticSpaceShipTwo {
 
     public EmergencyEgress getEmergencyEgress() {
         return emergencyEgress;
-    }
-
-    public Flight getFlight() {
-        return flight;
     }
 
     public Passenger[] getPassengers() {
