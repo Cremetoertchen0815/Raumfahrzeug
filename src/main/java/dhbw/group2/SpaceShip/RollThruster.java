@@ -1,8 +1,5 @@
 package dhbw.group2.SpaceShip;
 
-import dhbw.group2.SpaceShip.Thruster;
-import dhbw.group2.SpaceShip.VirginGalacticSpaceShipTwo;
-
 public class RollThruster extends Thruster {
 
     private final VirginGalacticSpaceShipTwo spaceship;

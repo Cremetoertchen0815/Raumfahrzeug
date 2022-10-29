@@ -1,7 +1,5 @@
 package dhbw.group2.SpaceShip;
 
-import dhbw.group2.SpaceShip.VirginGalacticSpaceShipTwo;
-
 public class Rudder {
     private final VirginGalacticSpaceShipTwo spaceship;
 

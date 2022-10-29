@@ -1,9 +1,7 @@
 package dhbw.group2.SpacePort.Tower;
 
-import dhbw.group2.SpacePort.Tower.MissionControl;
-
 public class Tower {
-    private MissionControl missionControl;
+    private final MissionControl missionControl;
 
     public Tower() {
         missionControl = new MissionControl(this);

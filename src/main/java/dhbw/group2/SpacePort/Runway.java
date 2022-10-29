@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Runway {
+    private final List<AirTrafficController> controllers = new ArrayList<>();
     private int length;
     private boolean isFree;
-    private final List<AirTrafficController> controllers = new ArrayList<>();
 
     public AirTrafficController createNewController() {
         var controller = new AirTrafficController(this);

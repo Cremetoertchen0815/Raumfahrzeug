@@ -10,14 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VirginGalacticSpaceShipTwo {
-    //Associations
-    private ShipState shipState = null;
     private final List<Flight> flight = new ArrayList<>();
-    private final WhiteKnightTwo whiteKnightTwo ;
+    private final WhiteKnightTwo whiteKnightTwo;
     private final Window[] windows;
     private final Door door = new Door();
     private final Elevons[] elevons;
-    private final FeatherMechanism[] featherMechanism = new FeatherMechanism[] { new FeatherMechanism(), new FeatherMechanism()};
+    private final FeatherMechanism[] featherMechanism = new FeatherMechanism[]{new FeatherMechanism(), new FeatherMechanism()};
     private final Rudder[] rudder;
     private final Thruster[] thruster;
     private final Cabin cabin = new Cabin(3.7f);
@@ -25,20 +23,21 @@ public class VirginGalacticSpaceShipTwo {
     private final NoseSkid noseSkid = new NoseSkid();
     private final EmergencyEgress emergencyEgress = new EmergencyEgress();
     private final Passenger[] passengers = new Passenger[6];
-    private final Pilot[] pilots = new Pilot[] {new Pilot(), new Pilot()};
+    private final Pilot[] pilots = new Pilot[]{new Pilot(), new Pilot()};
     private final HybridRocketSystem rocketSystem = new HybridRocketSystem();
     private final FuelTank fuelTank = new FuelTank(500);
-
     //Fields
     public int height;
     public int speed;
     public int apogee;
     public YawPitchRoll rotation;
+    //Associations
+    private ShipState shipState = null;
 
     public VirginGalacticSpaceShipTwo() {
-        elevons = new Elevons[] { new Elevons(this),  new Elevons(this)};
-        rudder = new Rudder[] { new Rudder(this), new Rudder(this)};
-        thruster = new Thruster[] { new RollThruster(this), new RollThruster(this)};
+        elevons = new Elevons[]{new Elevons(this), new Elevons(this)};
+        rudder = new Rudder[]{new Rudder(this), new Rudder(this)};
+        thruster = new Thruster[]{new RollThruster(this), new RollThruster(this)};
         whiteKnightTwo = new WhiteKnightTwo(this);
 
         //Create windows
