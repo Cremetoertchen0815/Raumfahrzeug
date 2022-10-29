@@ -1,4 +1,12 @@
-import org.example.*;
+import dhbw.group2.General.Door;
+import dhbw.group2.SpacePort.AirTrafficController;
+import dhbw.group2.SpacePort.Instructor;
+import dhbw.group2.SpacePort.Passenger;
+import dhbw.group2.SpacePort.Runway;
+import dhbw.group2.SpacePort.Tower.Tower;
+import dhbw.group2.SpaceShip.Thruster;
+import dhbw.group2.SpaceShip.VirginGalacticSpaceShipTwo;
+import dhbw.group2.SpaceShip.WhiteKnightTwo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
