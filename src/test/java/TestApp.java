@@ -6,6 +6,7 @@ public class TestApp {
 
     private VirginGalacticSpaceShipTwo vgsst;
     private WhiteKnightTwo wkt;
+    private Door door;
 
     private Instructor instructor;
     private Passenger passenger;
@@ -19,6 +20,7 @@ public class TestApp {
     public void setUp() {
         vgsst = new VirginGalacticSpaceShipTwo();
         wkt = new WhiteKnightTwo(vgsst);
+        door = new Door();
 
         instructor = new Instructor();
         passenger = new Passenger();
@@ -38,6 +40,16 @@ public class TestApp {
 
         assertEquals(6, vgsst.getPassengers().length);
         assertEquals(2, vgsst.getPilots().length);
+
+        door.close();
+        assertTrue(door.isClosed());
+        door.open();
+        assertFalse(door.isClosed());
+
+        door.lock();
+        assertTrue(door.isLocked());
+        door.unlock();
+        assertFalse(door.isLocked());
     }
 
     @Test

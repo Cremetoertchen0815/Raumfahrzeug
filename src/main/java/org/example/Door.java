@@ -19,4 +19,12 @@ public class Door extends EmergencyEgress {
     public void unlock() {
         isLocked = false;
     }
+
+    public boolean isClosed() {
+        return isClosed;
+    }
+
+    public boolean isLocked() {
+        return isLocked;
+    }
 }
