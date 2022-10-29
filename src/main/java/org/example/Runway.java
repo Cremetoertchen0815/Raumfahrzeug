@@ -13,4 +13,8 @@ public class Runway {
         controllers.add(controller);
         return controller;
     }
+
+    public List<AirTrafficController> getControllers() {
+        return controllers;
+    }
 }

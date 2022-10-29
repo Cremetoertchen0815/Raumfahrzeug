@@ -6,4 +6,8 @@ public class Tower {
     public Tower() {
         missionControl = new MissionControl(this);
     }
+
+    public MissionControl getMissionControl() {
+        return missionControl;
+    }
 }
